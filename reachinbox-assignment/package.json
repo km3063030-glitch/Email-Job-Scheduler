@@ -1,7 +1,10 @@
 {
   "name": "reachinbox-assignment",
   "private": true,
-  "workspaces": ["apps/backend", "apps/frontend"],
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend"
+  ],
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace apps/backend\" \"npm run dev --workspace apps/frontend\"",
     "dev:backend": "npm run dev --workspace apps/backend",
@@ -13,6 +16,7 @@
     "db:seed": "npm run db:seed --workspace apps/backend"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "vite": "^6.4.3"
   }
 }

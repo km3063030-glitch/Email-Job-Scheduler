@@ -29,7 +29,7 @@ export default function App() {
           <h1>Login</h1>
           <GoogleLogin
             width="402"
-            theme="filled_green"
+            theme="filled_blue"
             size="large"
             shape="rectangular"
             text="signin_with"

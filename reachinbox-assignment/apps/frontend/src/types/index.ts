@@ -1,3 +1,16 @@
+export type User = {
+  id: string;
+  email: string;
+  name: string;
+  avatarUrl?: string | null;
+};
+
+export type Sender = {
+  id: string;
+  name: string;
+  email: string;
+};
+
 export type Email = {
   id: string;
   to: string;
@@ -7,12 +20,13 @@ export type Email = {
   scheduledAt: string;
   sentAt?: string | null;
   failedAt?: string | null;
+  error?: string | null;
   messageId?: string | null;
   etherealPreviewUrl?: string | null;
-  error?: string | null;
+  sender?: Sender;
+  createdAt?: string;
+};
 
-  sender?: {
-    name: string;
-    email: string;
-  };
+export type AuthResponse = {
+  user: User;
 };
