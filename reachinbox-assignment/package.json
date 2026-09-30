@@ -1,0 +1,18 @@
+{
+  "name": "reachinbox-assignment",
+  "private": true,
+  "workspaces": ["apps/backend", "apps/frontend"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace apps/backend\" \"npm run dev --workspace apps/frontend\"",
+    "dev:backend": "npm run dev --workspace apps/backend",
+    "dev:frontend": "npm run dev --workspace apps/frontend",
+    "build": "npm run build --workspace apps/backend && npm run build --workspace apps/frontend",
+    "worker": "npm run worker --workspace apps/backend",
+    "db:generate": "npm run db:generate --workspace apps/backend",
+    "db:migrate": "npm run db:migrate --workspace apps/backend",
+    "db:seed": "npm run db:seed --workspace apps/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
